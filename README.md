@@ -18,8 +18,8 @@ To simulate a functioning HR platform that includes secure role-based access, re
 - **Blazor UI**: Fully server-side rendered UI with role-specific views and navigation.
 - **EF Core Integration**: Code-first approach with relationship mapping and database seeding.
 - **Secure API**: Organized endpoints grouped and protected using ASP.NET Core policies.
-- **Swagger Support**: API is available for testing at [https://localhost:7107/swagger/index.html](https://localhost:7107/swagger/index.html), or (in file location \HRMS_\goodDB\goodDB\HRAPI ther is a file named launch-swagger- double click to launch Swagger)
-- **Monitoring Ready**: Structured for Grafana integration (in file location \HRMS_\goodDB\goodDB\HRAPI ther is a file named launch-grafana- double click to launch Grafana)
+- **Swagger Support**: API is available for testing at [https://localhost:7107/swagger/index.html](https://localhost:7107/swagger/index.html), or (in file location \HRAPI there is a file named launch-swagger- double click to launch Swagger)
+- **Monitoring Ready**: Structured for Grafana integration (in file location \HRAPI ther is a file named launch-grafana- double click to launch Grafana)
 
 ---
 
