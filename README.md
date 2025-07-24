@@ -119,5 +119,5 @@ All accounts use the same password for simplicity. Role-based access will restri
 This code is provided for evaluation and demonstration purposes. Not intended for production without review.
 
 
-
+> Built with passion for UKG Junior Developer Hiring Campaign 2025
 
