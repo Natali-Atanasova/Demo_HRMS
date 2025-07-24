@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRAPI", "HRAPI\HRAPI.csproj", "{CAE92615-9985-4C0A-BD14-D4AE6A589466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRAPI.Tests", "HRAPI.Tests\HRAPI.Tests.csproj", "{45EFECC7-7F0E-47FA-B8A2-018B9EE24B79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAE92615-9985-4C0A-BD14-D4AE6A589466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE92615-9985-4C0A-BD14-D4AE6A589466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE92615-9985-4C0A-BD14-D4AE6A589466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE92615-9985-4C0A-BD14-D4AE6A589466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45EFECC7-7F0E-47FA-B8A2-018B9EE24B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45EFECC7-7F0E-47FA-B8A2-018B9EE24B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45EFECC7-7F0E-47FA-B8A2-018B9EE24B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45EFECC7-7F0E-47FA-B8A2-018B9EE24B79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C02357BF-3F94-4C5A-AD7E-E3E271363805}
+	EndGlobalSection
+EndGlobal

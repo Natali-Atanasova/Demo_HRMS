@@ -1,0 +1,1106 @@
+### HR Admin: svetla.petrova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "svetla.petrova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_hradmin_svetla}}
+GET https://localhost:7107/admin/all
+Authorization: Bearer {{jwt_hradmin_svetla}}
+
+### Engineering Admin: ivan.petrov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "ivan.petrov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_admin_ivan}}
+GET https://localhost:7107/admin/all
+Authorization: Bearer {{jwt_admin_ivan}}
+
+### Marketing Admin: rositsa.angelova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "rositsa.angelova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_admin_rositsa}}
+GET https://localhost:7107/admin/all
+Authorization: Bearer {{jwt_admin_rositsa}}
+
+### Finance Admin: kalina.petkova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "kalina.petkova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_admin_kalina}}
+GET https://localhost:7107/admin/all
+Authorization: Bearer {{jwt_admin_kalina}}
+
+### Sales Admin: aleksandar.zlatev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "aleksandar.zlatev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_admin_aleksandar}}
+GET https://localhost:7107/admin/all
+Authorization: Bearer {{jwt_admin_aleksandar}}
+
+### Manager: maria.georgieva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "maria.georgieva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_manager_maria}}
+GET https://localhost:7107/manager/department
+Authorization: Bearer {{jwt_manager_maria}}
+
+### Manager: georgi.ivanov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "georgi.ivanov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_manager_georgi}}
+GET https://localhost:7107/manager/department
+Authorization: Bearer {{jwt_manager_georgi}}
+
+### Manager: borislav.todorov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "borislav.todorov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_manager_borislav}}
+GET https://localhost:7107/manager/department
+Authorization: Bearer {{jwt_manager_borislav}}
+
+### Manager: ralice.ganeva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "ralica.ganeva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_manager_ralica}}
+GET https://localhost:7107/manager/department
+Authorization: Bearer {{jwt_manager_ralica}}
+
+### Manager: danail.popov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "danail.popov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_manager_danail}}
+GET https://localhost:7107/manager/department
+Authorization: Bearer {{jwt_manager_danail}}
+
+### HR Manager: violeta.kirova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "violeta.kirova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_hrmanager_violeta}}
+GET https://localhost:7107/admin/all
+Authorization: Bearer {{jwt_hrmanager_violeta}}
+
+### Manager: simeon.kolev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "simeon.kolev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_manager_simeon}}
+GET https://localhost:7107/manager/department
+Authorization: Bearer {{jwt_manager_simeon}}
+
+### Manager: lyudmila.mileva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "lyudmila.mileva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_manager_lyudmila}}
+GET https://localhost:7107/manager/department
+Authorization: Bearer {{jwt_manager_lyudmila}}
+
+### Manager: sofia.ilieva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "sofia.ilieva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_manager_sofia}}
+GET https://localhost:7107/manager/department
+Authorization: Bearer {{jwt_manager_sofia}}
+
+### Manager: vladimir.kalchev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "vladimir.kalchev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_manager_vladimir}}
+GET https://localhost:7107/manager/department
+Authorization: Bearer {{jwt_manager_vladimir}}
+
+### Manager: silvia.yaneva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "silvia.yaneva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_manager_silvia}}
+GET https://localhost:7107/manager/department
+Authorization: Bearer {{jwt_manager_silvia}}
+
+### Employee: desislava.nikolova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "desislava.nikolova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_desislava}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_desislava}}
+
+### Employee: petar.dimitrov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "petar.dimitrov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_petar}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_petar}}
+
+### Employee: anton.simeonov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "anton.simeonov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_anton}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_anton}}
+
+}
+
+  ### Employee: radoslav.iliev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "radoslav.iliev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_radoslav}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_radoslav}}
+
+### Employee: yulian.stoyanov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "yulian.stoyanov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_yulian}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_yulian}}
+
+### Employee: valentina.hristova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "valentina.hristova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_valentina}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_valentina}}
+
+### Employee: milena.yordanova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "milena.yordanova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_milena}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_milena}}
+
+### Employee: nikola.mihailov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "nikola.mihailov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_nikola}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_nikola}}
+
+### Employee: liliya.koleva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "liliya.koleva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_liliya}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_liliya}}
+
+### Employee: todor.vasilev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "todor.vasilev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_todor}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_todor}}
+
+### Employee: stanislav.petkov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "stanislav.petkov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_stanislav}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_stanislav}}
+
+### Employee: martin.grozdanov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "martin.grozdanov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_martin_g}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_martin_g}}
+
+### Employee: ivaylo.marinov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "ivaylo.marinov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_ivaylo}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_ivaylo}}
+
+### Employee: borislav.pavlov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "borislav.pavlov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_borislav_p}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_borislav_p}}
+
+### Employee: vasil.stankov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "vasil.stankov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_vasil}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_vasil}}
+
+### Employee: polina.dobreva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "polina.dobreva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_polina}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_polina}}
+
+### Employee: kaloyan.angelov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "kaloyan.angelov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_kaloyan}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_kaloyan}}
+
+### Employee: kristina.filipova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "kristina.filipova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_kristina_f}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_kristina_f}}
+
+### Employee: miroslav.borisov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "miroslav.borisov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_miroslav}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_miroslav}}
+
+### Employee: teodora.mitkova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "teodora.mitkova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_teodora}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_teodora}}
+
+### Employee: zhivko.yordanov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "zhivko.yordanov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_zhivko}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_zhivko}}
+
+### Employee: radostin.tsanev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "radostin.tsanev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_radostin_t}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_radostin_t}}
+
+### Employee: martin.penev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "martin.penev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_martin_p}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_martin_p}}
+
+### Employee: ivelina.mihailova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "ivelina.mihailova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_ivelina}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_ivelina}}
+
+### Employee: stoyan.georgiev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "stoyan.georgiev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_stoyan}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_stoyan}}
+
+### Employee: milko.dimitrov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "milko.dimitrov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_milko}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_milko}}
+
+### Employee: tsvetelina.dobreva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "tsvetelina.dobreva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_tsvetelina}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_tsvetelina}}
+
+### Employee: plamen.mladenov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "plamen.mladenov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_plamen}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_plamen}}
+
+### Employee: gergana.koleva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "gergana.koleva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_gergana}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_gergana}}
+
+### Employee: svetoslav.dimitrov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "svetoslav.dimitrov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_svetoslav}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_svetoslav}}
+
+### Employee: ivona.pavlova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "ivona.pavlova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_ivona}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_ivona}}
+
+### Employee: stefan.kirilov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "stefan.kirilov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_stefan_k}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_stefan_k}}
+
+  ### Employee: emil.todorov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "emil.todorov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_emil}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_emil}}
+
+### Employee: monika.stancheva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "monika.stancheva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_monika}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_monika}}
+
+### Employee: nikolay.lazarov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "nikolay.lazarov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_nikolay}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_nikolay}}
+
+### Employee: kristina.pavlova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "kristina.pavlova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_kristina_p}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_kristina_p}}
+
+### Employee: radostin.dinev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "radostin.dinev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_radostin_d}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_radostin_d}}
+
+### Employee: mila.hristova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "mila.hristova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_mila}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_mila}}
+
+### Employee: diana.zlateva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "diana.zlateva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_diana}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_diana}}
+
+### Employee: bogdan.rusev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "bogdan.rusev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_bogdan}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_bogdan}}
+
+### Employee: yana.gospodinova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "yana.gospodinova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_yana}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_yana}}
+
+### Employee: stefan.petkov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "stefan.petkov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_stefan_p}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_stefan_p}}
+
+### Employee: lora.borisova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "lora.borisova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_lora}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_lora}}
+
+### Employee: viktor.marinov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "viktor.marinov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_viktor_m}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_viktor_m}}
+
+### Employee: petya.mihova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "petya.mihova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_petya}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_petya}}
+
+### Employee: emiliya.hristova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "emiliya.hristova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_emiliya}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_emiliya}}
+
+### Employee: atanas.todorov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "atanas.todorov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_atanas}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_atanas}}
+
+### Employee: veronika.ilieva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "veronika.ilieva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_veronika}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_veronika}}
+
+### Employee: slavi.stoyanov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "slavi.stoyanov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_slavi}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_slavi}}
+
+### Employee: ekaterina.dineva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "ekaterina.dineva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_ekaterina}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_ekaterina}}
+
+### Employee: dimitar.ivanov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "dimitar.ivanov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_dimitar}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_dimitar}}
+
+### Employee: radostin.stanev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "radostin.stanev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_radostin_s}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_radostin_s}}
+
+### Employee: mila.hristova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "mila.hristova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_mila2}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_mila2}}
+
+### Employee: zhivko.yordanov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "zhivko.yordanov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_zhivko2}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_zhivko2}}
+
+### Employee: ivana.dimitrova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "ivana.dimitrova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_ivana}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_ivana}}
+
+### Employee: tanya.nikolova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "tanya.nikolova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_tanya}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_tanya}}
+
+### Employee: stefan.stoyanov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "stefan.stoyanov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_stefan_s}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_stefan_s}}
+
+### Employee: vanya.zheleva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "vanya.zheleva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_vanya}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_vanya}}
+
+### Employee: mihaela.kostova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "mihaela.kostova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_mihaela}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_mihaela}}
+
+### Employee: boriana.koleva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "boriana.koleva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_boriana}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_boriana}}
+
+### Employee: veselin.veselinov login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "veselin.veselinov",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_veselin}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_veselin}}
+
+### Employee: aneliya.petkova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "aneliya.petkova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_aneliya}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_aneliya}}
+
+### Employee: plamen.georgiev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "plamen.georgiev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_plamen_g}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_plamen_g}}
+
+### Employee: ralitsa.ivanova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "ralitsa.ivanova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_ralitsa}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_ralitsa}}
+
+### Employee: nadezhda.marinova login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "nadezhda.marinova",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_nadezhda}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_nadezhda}}
+
+### Employee: viktor.iliev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "viktor.iliev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_viktor_i}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_viktor_i}}
+
+### Employee: stela.valcheva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "stela.valcheva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_stela}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_stela}}
+
+### Employee: teodor.denev login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "teodor.denev",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_teodor}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_teodor}}
+
+### Employee: silvia.yaneva login
+POST https://localhost:7107/login
+Content-Type: application/json
+
+{
+  "username": "silvia.yaneva",
+  "password": "Password123!"
+}
+###
+# Use the token as {{jwt_employee_silvia}}
+GET https://localhost:7107/employee/profile
+Authorization: Bearer {{jwt_employee_silvia}}
