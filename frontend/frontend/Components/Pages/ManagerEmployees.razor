@@ -1,0 +1,185 @@
+﻿@rendermode InteractiveServer
+@page "/manager/employees"
+@inject HttpClient Http
+@inject AuthService Auth
+@inject ProtectedLocalStorage Storage
+@inject NavigationManager Navigation
+
+<h3>My Department Employees</h3>
+
+@if (!isLoaded)
+{
+    <p>Loading...</p>
+}
+else if (!Auth.IsAuthenticated || Auth.Role != "Manager")
+{
+    <div class="alert alert-danger">Access denied.</div>
+}
+else
+{
+    <h5>Department: @departmentName</h5>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job Title</th>
+                <th>Salary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in departmentEmployees)
+            {
+                <tr>
+                    <td>@e.FirstName @e.LastName</td>
+                    <td>@e.Email</td>
+                    <td>@e.JobTitle</td>
+                    <td>@e.Salary</td>
+                    <td>
+                        @if (manager != null && e.Id != manager.Id)
+                        {
+                            <button class="btn btn-primary btn-sm" @onclick="@(() => ShowEditModal(e))">Edit</button>
+                        }
+                        else
+                        {
+                            <span class="text-muted">--</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (showModal)
+{
+    <div class="modal show d-block" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Employee</h5>
+                    <button type="button" class="btn-close" @onclick="CloseModal"></button>
+                </div>
+                <div class="modal-body">
+                    <EditForm Model="editingEmployee" OnValidSubmit="SaveEmployee">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <div class="mb-3">
+                            <label>First Name</label>
+                            <InputText @bind-Value="editingEmployee.FirstName" class="form-control" />
+                        </div>
+                        <div class="mb-3">
+                            <label>Last Name</label>
+                            <InputText @bind-Value="editingEmployee.LastName" class="form-control" />
+                        </div>
+                        <div class="mb-3">
+                            <label>Email</label>
+                            <InputText @bind-Value="editingEmployee.Email" class="form-control" />
+                        </div>
+                        <div class="mb-3">
+                            <label>Job Title</label>
+                            <InputText @bind-Value="editingEmployee.JobTitle" class="form-control" />
+                        </div>
+                        <div class="mb-3">
+                            <label>Salary</label>
+                            <InputNumber @bind-Value="editingEmployee.Salary" class="form-control" />
+                        </div>
+                        <button type="submit" class="btn btn-success">Save</button>
+                        <button type="button" class="btn btn-secondary" @onclick="CloseModal">Cancel</button>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
+
+@code {
+    private List<Employee> departmentEmployees = new();
+    private Employee editingEmployee = new();
+    private Employee? manager = null;
+    private string departmentName = "";
+    private bool showModal = false;
+    private bool isLoaded = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var token = (await Storage.GetAsync<string>("authToken")).Value;
+            await Auth.InitializeAsync(token);
+
+            if (!Auth.IsAuthenticated || Auth.Role != "Manager")
+            {
+                isLoaded = true;
+                StateHasChanged();
+                return;
+            }
+            await LoadDepartmentEmployees();
+            isLoaded = true;
+            StateHasChanged();
+        }
+    }
+
+    private async Task LoadDepartmentEmployees()
+    {
+        var result = await Http.GetFromJsonAsync<DepartmentResponse>("/manager/department");
+        departmentEmployees = result?.employees ?? new();
+        departmentName = result?.manager?.Department?.Name ?? "";
+        manager = result?.manager;
+    }
+
+    private void ShowEditModal(Employee emp)
+    {
+        editingEmployee = new Employee
+        {
+            Id = emp.Id,
+            FirstName = emp.FirstName,
+            LastName = emp.LastName,
+            Email = emp.Email,
+            JobTitle = emp.JobTitle,
+            Salary = emp.Salary
+        };
+        showModal = true;
+    }
+
+    private void CloseModal()
+    {
+        showModal = false;
+    }
+
+    private async Task SaveEmployee()
+    {
+        // Only allow editing 
+        if (editingEmployee.Id != 0)
+            await Http.PutAsJsonAsync($"/manager/employee/{editingEmployee.Id}", editingEmployee);
+
+        showModal = false;
+        await LoadDepartmentEmployees();
+    }
+
+
+    public class Employee
+    {
+        public int Id { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? Email { get; set; }
+        public string? JobTitle { get; set; }
+        public decimal Salary { get; set; }
+        public Department? Department { get; set; }
+    }
+
+    public class Department
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+    }
+
+    public class DepartmentResponse
+    {
+        public Employee? manager { get; set; }
+        public List<Employee> employees { get; set; } = new();
+    }
+}

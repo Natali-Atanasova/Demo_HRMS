@@ -1,0 +1,81 @@
+﻿@rendermode InteractiveServer
+@page "/profile"
+@inject HttpClient Http
+@inject AuthService Auth
+@inject ProtectedLocalStorage Storage
+@inject NavigationManager Navigation
+
+<h3>Your Profile</h3>
+
+@if (!loaded)
+{
+    <p>Loading...</p>
+}
+else if (employee == null)
+{
+    <div class="alert alert-danger">Failed to load profile. Please log in.</div>
+}
+else
+{
+    <div class="card" style="width: 22rem;">
+        <div class="card-body">
+            <h5 class="card-title">@employee.FirstName @employee.LastName</h5>
+            <h6 class="card-subtitle mb-2 text-muted">@employee.JobTitle</h6>
+            <p class="card-text">
+                <b>Email:</b> @employee.Email <br />
+                <b>Department:</b> @employee.Department?.Name <br />
+                <b>Salary:</b> @employee.Salary
+            </p>
+        </div>
+    </div>
+}
+
+@code {
+    private bool loaded = false;
+    private bool firstRender = true;
+    private Employee? employee;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            this.firstRender = false;
+            var token = (await Storage.GetAsync<string>("authToken")).Value;
+            await Auth.InitializeAsync(token);
+
+            if (!Auth.IsAuthenticated)
+            {
+                Navigation.NavigateTo("/login");
+                return;
+            }
+
+            try
+            {
+                employee = await Http.GetFromJsonAsync<Employee>("/employee/profile");
+            }
+            catch
+            {
+                employee = null;
+            }
+            loaded = true;
+            StateHasChanged();
+        }
+    }
+
+    public class Employee
+    {
+        public int Id { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? Email { get; set; }
+        public string? JobTitle { get; set; }
+        public decimal Salary { get; set; }
+        public Department? Department { get; set; }
+    }
+
+    public class Department
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+    }
+}

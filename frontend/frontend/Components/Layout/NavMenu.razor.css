@@ -1,0 +1,104 @@
+.navbar {
+    background: linear-gradient(90deg, #6d28d9 0%, #3a0647 100%) !important;
+    border-bottom: none !important;
+    box-shadow: 0 2px 18px 0 rgba(110, 33, 140, 0.10);
+    min-height: 3.7rem;
+    padding: 0.3rem 2.2rem;
+    border-radius: 0; 
+    margin: 0 0 1.2rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #c084fc !important;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 10px rgba(250,91,152,0.12);
+    border-radius: 0;
+    padding: 0.5rem 1.1rem;
+    background: rgba(255,255,255,0.03);
+    margin-right: 1.4rem;
+    transition: color 0.15s, background 0.15s;
+}
+
+    .navbar-brand:hover {
+        color: #fa5b98 !important;
+        text-shadow: 0 3px 18px #c084fc33;
+        background: rgba(255,255,255,0.10);
+    }
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 0; 
+    margin-left: 0.22rem;
+    margin-right: 0.22rem;
+    padding: 0.5rem 1.1rem;
+    transition: background 0.15s, color 0.15s, box-shadow 0.16s;
+    position: relative;
+    box-shadow: none;
+}
+
+    .nav-link.active, .nav-link:active,
+    .nav-link:hover, .navbar-nav .show > .nav-link {
+        background: linear-gradient(90deg, #fa5b98 10%, #c084fc 90%);
+        color: #fff !important;
+        box-shadow: 0 2px 10px 0 rgba(250,91,152,0.10);
+        text-decoration: none;
+        outline: none;
+        border-radius: 0;
+    }
+
+.navbar-collapse, #navbarNav {
+    background: transparent !important;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.nav-link:focus, .navbar-brand:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px #c084fc33;
+}
+
+.dropdown-menu {
+    background: #fff8ff;
+    border: none;
+    box-shadow: 0 4px 32px 0 rgba(160, 108, 214, 0.11);
+    border-radius: 0;
+    padding: 0.8rem 0.4rem;
+}
+
+.dropdown-item {
+    border-radius: 0;
+    font-weight: 500;
+    color: #6d28d9;
+    transition: background 0.13s, color 0.13s;
+    padding: 0.7rem 1.1rem;
+}
+
+    .dropdown-item:hover, .dropdown-item:active {
+        background: linear-gradient(90deg, #fa5b98 0%, #c084fc 90%);
+        color: #fff;
+        border-radius: 0;
+    }
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0.3rem 0.8rem;
+        border-radius: 0;
+        margin: 0 0 1.2rem 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+        margin-right: 0.7rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-link {
+        margin: 0.15rem 0;
+        width: 100%;
+        padding: 0.7rem 1rem;
+        border-radius: 0;
+    }
+}

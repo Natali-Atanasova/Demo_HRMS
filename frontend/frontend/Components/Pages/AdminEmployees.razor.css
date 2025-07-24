@@ -1,0 +1,62 @@
+.btn-success {
+    background: linear-gradient(90deg, #5b21b6 0%, #7c3aed 100%);
+    color: #fff !important;
+    font-weight: 800;
+    border-radius: 2.2rem;
+    padding: 0.6rem 2.3rem;
+    font-size: 1.18rem;
+    box-shadow: 0 2.5px 12px #7c3aed33;
+    border: none;
+    letter-spacing: 0.01em;
+    transition: background 0.15s, box-shadow 0.16s;
+    margin-bottom: 1.1rem;
+}
+
+    .btn-success:hover, .btn-success:focus {
+        background: linear-gradient(90deg, #7c3aed 10%, #fa5b98 90%);
+        color: #fff !important;
+        box-shadow: 0 4px 20px #c084fc33;
+    }
+/* Ensure Action column allows tooltips to be seen */
+.table td:last-child,
+td.actions-cell {
+    overflow: visible !important;
+    position: relative;
+}
+
+/* If your button has .btn-danger, make sure it’s also positioned */
+.btn-danger {
+    position: relative;
+    z-index: 2;
+}
+
+    /* Actual tooltip for Delete */
+    .btn-danger::after {
+        content: "Permanently remove this employee";
+        position: absolute;
+        left: 50%;
+        top: -2.3em;
+        transform: translateX(-50%);
+        background: linear-gradient(90deg, #fff0f3 70%, #fdf6f8 100%);
+        color: #b91c1c;
+        border: 1px solid #fa5b98;
+        border-radius: 1.2em;
+        box-shadow: 0 1.5px 10px #fa5b9833;
+        padding: 0.44em 1.2em;
+        font-size: 0.98em;
+        font-weight: 700;
+        white-space: nowrap;
+        z-index: 9999;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.18s;
+        display: block; /* Always present, but invisible unless hover */
+        visibility: hidden;
+    }
+
+    /* Show on hover/focus */
+    .btn-danger:hover::after,
+    .btn-danger:focus::after {
+        opacity: 1;
+        visibility: visible;
+    }

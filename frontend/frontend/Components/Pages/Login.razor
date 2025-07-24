@@ -1,0 +1,66 @@
+﻿@rendermode InteractiveServer
+@page "/login"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject AuthService Auth
+@inject ProtectedLocalStorage Storage
+
+<h3>Login</h3>
+
+@if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <div class="alert alert-danger">@ErrorMessage</div>
+}
+
+<EditForm Model="loginModel" OnValidSubmit="HandleLogin">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label>Username:</label>
+        <InputText @bind-value="loginModel.Username" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Password:</label>
+        <InputText @bind-value="loginModel.Password" type="password" class="form-control" />
+    </div>
+    <button class="btn btn-primary" type="submit">Login</button>
+</EditForm>
+
+@code {
+    private LoginModel loginModel = new();
+    private string ErrorMessage = "";
+
+    public class LoginModel
+    {
+        public string? Username { get; set; }
+        public string? Password { get; set; }
+    }
+
+    public class JwtTokenResponse
+    {
+        public string? Token { get; set; }
+    }
+
+    private async Task HandleLogin()
+    {
+        ErrorMessage = "";
+
+        var response = await Http.PostAsJsonAsync("/login", loginModel);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var json = await response.Content.ReadFromJsonAsync<JwtTokenResponse>();
+            if (json?.Token != null)
+            {
+                await Storage.SetAsync("authToken", json.Token);
+                await Auth.InitializeAsync(json.Token);
+                Navigation.NavigateTo("/profile", true);
+            }
+        }
+        else
+        {
+            ErrorMessage = "Login failed. Please check your credentials.";
+        }
+    }
+}

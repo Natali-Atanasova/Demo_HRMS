@@ -1,0 +1,132 @@
+.card {
+    border: none;
+    border-radius: 2.1rem;
+    box-shadow: 0 10px 36px -8px #a88ee655, 0 1.5px 6px #b3a6e4;
+    background: linear-gradient(135deg, #faf7fc 68%, #ede6fa 100%);
+    margin: 4rem auto 2.3rem auto;
+    max-width: 420px;
+    min-width: 270px;
+}
+
+/* Avatar above card body (CSS-only) */
+.card-body {
+    position: relative;
+    padding: 4.5rem 2.2rem 2rem 2.2rem; /* top padding for avatar */
+    text-align: center;
+}
+
+    .card-body::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -2.6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ede6fa 70%, #f3f0ff 100%);
+        box-shadow: 0 2px 10px -2px #b695e4;
+        z-index: 5;
+        overflow: hidden;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="none" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle fill="%237c3aed" cx="32" cy="32" r="32"/><circle fill="white" cx="32" cy="27" r="12"/><ellipse fill="white" cx="32" cy="48" rx="18" ry="10"/></svg>');
+        background-size: 74% 74%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+.card-title {
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: #5b21b6;
+    letter-spacing: -1.2px;
+    margin-bottom: 0.23rem;
+    line-height: 1.1;
+}
+
+.card-subtitle {
+    color: #fa5b98 !important;
+    font-weight: 700;
+    font-size: 1.23rem;
+    margin-bottom: 1.28rem;
+    letter-spacing: 0.015em;
+}
+
+.card-text {
+    font-size: 1.22rem;
+    color: #31294b;
+    text-align: left;
+    background: rgba(245, 236, 255, 0.46);
+    border-radius: 1.1rem;
+    box-shadow: 0 2px 18px -8px #b695e4;
+    display: inline-block;
+    padding: 1.12rem 1.2rem 0.9rem 1.2rem;
+    margin-top: 1.2rem;
+    line-height: 1.85;
+    min-width: 210px;
+}
+
+    .card-text b {
+        color: #7c3aed;
+        min-width: 108px;
+        display: inline-block;
+        font-weight: 800;
+        font-size: 1.13rem;
+        margin-right: 0.16em;
+    }
+
+        /* SVG money icon after Salary (3rd <b>) */
+        .card-text b:nth-of-type(3) {
+            position: relative;
+            padding-right: 2.1em;
+        }
+
+            .card-text b:nth-of-type(3)::after {
+                content: "";
+                display: inline-block;
+                width: 1.6em;
+                height: 1.6em;
+                background-image: url('data:image/svg+xml;utf8,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="22" height="22" rx="6" fill="%23C6F6D5"/><text x="11" y="16" text-anchor="middle" font-size="15" fill="%2300A86B" font-family="Arial, Helvetica, sans-serif" font-weight="bold">$</text></svg>');
+                background-size: contain;
+                background-repeat: no-repeat;
+                vertical-align: middle;
+                margin-left: 0.32em;
+                margin-bottom: -0.15em;
+                transition: filter 0.18s;
+            }
+
+
+            .card-text b:nth-of-type(3):hover::after {
+                filter: brightness(1.15) drop-shadow(0 1px 4px #bbf7d0cc);
+            }
+
+@media (max-width: 600px) {
+    .card {
+        border-radius: 1.05rem;
+        margin: 2rem auto 1.1rem auto;
+        max-width: 98vw;
+    }
+
+    .card-body {
+        padding: 3.5rem 0.5rem 0.8rem 0.5rem;
+    }
+
+    .card-title {
+        font-size: 1.26rem;
+    }
+
+    .card-subtitle {
+        font-size: 1.04rem;
+    }
+
+    .card-text {
+        font-size: 1.01rem;
+        padding: 0.6rem 0.4rem;
+    }
+
+    .card-body::before {
+        width: 2.7rem;
+        height: 2.7rem;
+        top: -1.6rem;
+    }
+}

@@ -1,0 +1,76 @@
+﻿@rendermode InteractiveServer
+@inject AuthService Auth
+@inject NavigationManager Navigation
+@inject HttpClient Http
+@inject AuthService Auth
+@inject ProtectedLocalStorage Storage
+@inject NavigationManager Navigation
+
+<!--
+<p>
+    Authenticated: @Auth.IsAuthenticated<br />
+    User: @Auth.UserName<br />
+    Role: @Auth.Role
+</p>
+-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="/">HR Maneging system</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/" Match="NavLinkMatch.All">Home</NavLink>
+                </li>
+                @if (Auth.IsAuthenticated && Auth.Role == "HR Admin")
+                {
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="/admin/employees">Admin Employees</NavLink>
+                    </li>
+                }
+                @if (Auth.IsAuthenticated && Auth.Role == "Manager")
+                {
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="/manager/employees">Manager Employees</NavLink>
+                    </li>
+                }
+                @if (Auth.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="/profile">Profile</NavLink>
+                    </li>
+                }
+            </ul>
+            <ul class="navbar-nav">
+                @if (Auth.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="/logout">Logout (@Auth.UserName)</NavLink>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="/login">Login</NavLink>
+                    </li>
+                }
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+@code {
+    protected override void OnInitialized()
+    {
+        Auth.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        Auth.OnChange -= StateHasChanged;
+    }
+}
